@@ -34,27 +34,43 @@ label4 = tk.Label(mainWindow, text="")
 label4.pack()
 
 def add():
-    n1 = int(first.get())
-    n2 = int(second.get())
-    n3 = n1+n2
-    label4.config(text='Sum: ' + str(n3))
+    try:
+        n1 = int(first.get())
+        n2 = int(second.get())
+        result = n1 + n2
+        label4.config(text='Addition Result is:'+ str(result))
+    except ValueError:
+        label4.config(text="You can only enter integer numbers.")
 
 def sub():
-    n1 = int(first.get())
-    n2 = int(second.get())
-    n3 = n1 - n2
-    label4.config(text='Subtraction: ' + str(n3))
+    try:
+        n1 = int(first.get())
+        n2 = int(second.get())
+        result = n1 - n2
+        label4.config(text='Subtraction Result is:'+ str(result))
+    except ValueError:
+        label4.config(text="You can only enter integer numbers.")
 
 def mul():
-    n1 = int(first.get())
-    n2 = int(second.get())
-    n3 = n1 * n2
-    label4.config(text='Multiplication: ' + str(n3))
+    try:
+        n1 = int(first.get())
+        n2 = int(second.get())
+        result = n1 * n2
+        label4.config(text='Multiplication Result is:'+ str(result))
+    except ValueError:
+        label4.config(text="You can only enter integer numbers.")
 
 def div():
-    n1 = int(first.get())
-    n2 = int(second.get())
-    n3 = n1 / n2
-    label4.config(text='Division: ' + str(n3))
+    try:
+        n1 = int(first.get())
+        n2 = int(second.get())
+
+        if (n2 != 0):
+            result = n1 / n2
+            label4.config(text='Division Result is:'+ str(result))
+        else:
+            label4.config(text='Value of second variable cannot be zero.')
+    except ValueError:
+        label4.config(text="You can only enter integer numbers.")
 
 mainWindow.mainloop()
