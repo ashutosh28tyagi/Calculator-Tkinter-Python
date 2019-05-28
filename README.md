@@ -6,4 +6,4 @@
 3. Performing action on button click
 
 ## Screenshots
-!(image)https://github.com/ashutosh28tyagi/Calculator-Tkinter-Python/blob/master/calculator.jpg
+!(image)[https://github.com/ashutosh28tyagi/Calculator-Tkinter-Python/blob/master/calculator.jpg]
